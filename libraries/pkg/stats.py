@@ -1,3 +1,16 @@
+"""
+a simple module calculates properties of a group of data.
+
+it has the following functionalities
+- calculate length of the group of data
+- center tendency
+- range
+- midrange
+
+about
+@ZL, 20200903
+"""
+
 from typing import Sequence, Union, Tuple
 import collections
 
