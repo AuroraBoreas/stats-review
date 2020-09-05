@@ -47,3 +47,29 @@ class SimpleStatistics:
     
     def _midrange(self) -> float:
         return max(self.seq) + min(self.seq) / 2
+
+class varSimpleStatistics(SimpleStatistics):
+    def variance(self) -> float:
+        if self.seq:
+            m = self.mean()
+            r = [(i - m)**2 for i in self.seq]
+            return sum(r) / len(self.seq)
+        else:
+            raise ValueError('empty squence is Not allowed')
+
+    def pstdvar(self) -> float:
+        """
+        NOTE: population standard variance
+        """
+        return self.variance() ** .5
+
+    def sstdvar(self) -> float:
+        """
+        NOTE: sample standard variance
+        """
+        if self.seq:
+            m = self.mean()
+            r = [(i - m)**2 for i in self.seq]
+            return (sum(r) / (len(self.seq) - 1)) ** .5
+        else:
+            raise ValueError('empty squence is Not allowed')
