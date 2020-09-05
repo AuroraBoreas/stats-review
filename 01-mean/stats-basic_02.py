@@ -15,6 +15,11 @@ concept: smaple vs population
 +-----------+-------------------------------+-----------------------+
 | mean      | x-bar = sum(1...n)/n          | u = sum(1...N)/N      |
 +-----------+-------------------------------+-----------------------+
+| variance  | σ^2                           | s^2                   |
++-----------+-------------------------------+-----------------------+
+| stdvar    | σ                             | s                     |
++-----------+-------------------------------+-----------------------+
+
 
 concept: dispersion
 
@@ -34,6 +39,8 @@ class varSimpleStatistics(SimpleStatistics):
             return sum(r) / len(self.seq)
         else:
             raise ValueError('empty squence is Not allowed')
+    def stdvar(self) -> float:
+        return self.variance() ** 0.5
 
 p1 = [2, 2, 3, 3]
 p2 = [0, 0, 5, 5]

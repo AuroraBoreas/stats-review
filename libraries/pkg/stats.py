@@ -11,11 +11,11 @@ about
 @ZL, 20200903
 """
 
-from typing import Sequence, Union, Tuple
+from typing import Union, Tuple, List
 import collections
 
 class SimpleStatistics:
-    def __init__(self, seq: Sequence) -> None:
+    def __init__(self, seq: List[Union[int, float]]) -> None:
         self.seq = seq
         
     def __len__(self) -> Union[int, float]:
