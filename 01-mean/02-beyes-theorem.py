@@ -1,7 +1,10 @@
 """
 ! what?
+"Rationality is NOT about knowing facts, 
+it's about recognizing which facts are relavent"
 
 ! why?
+Evidence should NOT determine beliefs, but update them
 
 ! how?
 
